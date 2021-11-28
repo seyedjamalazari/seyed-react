@@ -1,13 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-import Store from './Components/Store';
 
-function App() {
+import React from 'react';
+import ProductContextProvider from './Context/ProductContextProvider';
+
+const App = () => {
   return (
-    <div className="App">
-      <Store/>
-    </div>
+    <ProductContextProvider>
+
+    </ProductContextProvider>
+  
   );
-}
+};
 
 export default App;
+
+
+
