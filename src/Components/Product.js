@@ -7,7 +7,8 @@ const Product = ({productData}) => {
 
     
     return (
-        <div>
+        <div style={{display:"flex",flexDirection:"row" ,justifyContent:"space-around"}}>
+            <img src={productData.image} style={{width:"60px"}} alt="product"/>
             <h2>{productData.id}</h2>
             <h3>{shorten(productData.title)}</h3>
             <Link to={`/products/${productData.id}`}>ditails</Link>

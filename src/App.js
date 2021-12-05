@@ -5,10 +5,15 @@ import Store from "./Components/Store";
 import ProductContextProvider from "./Context/ProductContextProvider";
 import ProductDetils from "./Components/ProductDetils";
 import NotFound from './Components/NotFound';
+import CartContextProvider from "./Context/CartContextProvider";
+
 
 const App = () => {
   return (
     <ProductContextProvider>
+    <CartContextProvider>
+
+   
       <Routes>
         <Route path="/products/:id" element={<ProductDetils />} />  
         <Route path="/products/" element={<Store />} /> 
@@ -17,7 +22,8 @@ const App = () => {
         <Route path="/notfound/" element={<NotFound/>} />        
         <Route  path ="/*" element={ <Navigate replace to="/notfound" />} />
         
-      </Routes>
+      </Routes> 
+      </CartContextProvider>
     </ProductContextProvider>
   );
 };
