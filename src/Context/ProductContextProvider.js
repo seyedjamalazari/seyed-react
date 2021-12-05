@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { getProducts } from '../shared/Function';
+import { getProducts } from '../shared/API';
 
  export const ProductsContext=createContext();
 
