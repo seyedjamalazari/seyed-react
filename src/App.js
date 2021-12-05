@@ -11,7 +11,9 @@ const App = () => {
     <ProductContextProvider>
       <Routes>
         <Route path="/products/:id" element={<ProductDetils />} />  
-        <Route path="/products/" element={<Store />} />        
+        <Route path="/products/" element={<Store />} /> 
+        <Route path="/" element={<Store />} /> 
+
         <Route path="/notfound/" element={<NotFound/>} />        
         <Route  path ="/*" element={ <Navigate replace to="/notfound" />} />
         

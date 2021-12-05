@@ -1,11 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 
 const NotFound = () => {
+
+    const navigate=useNavigate();
+    const clickHandler=()=>{
+        navigate("/",{replace:true});
+    }
     return (
         <div>
             <h1>Bas Esheyi</h1>
-            <Link to={`/products/`}>Back to shop</Link>
+            <button onClick={clickHandler}>go to shop seyed</button>
+           
         </div>
     );
 };
