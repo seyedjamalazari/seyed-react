@@ -1,0 +1,32 @@
+.storestyle {
+  display: flex;
+  flex-direction: row;
+  background-color: #d09fec7a;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding:3rem;
+}
+.imgproduct {
+  width: 12rem;
+  border-radius: 1em;
+  height: 20rem;
+  padding: 2em;
+  margin: 0;
+  background-color: cornflowerblue;
+  
+}
+.icon {
+  width: 1rem;
+  height: 1rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.Product{
+  padding: 3rem;
+}
+.navbar{
+  height: 60px;
+  background-color: blueviolet;
+  text-align: center;
+ line-height: 3rem;
+}

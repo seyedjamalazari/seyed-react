@@ -1,28 +1,27 @@
 import React from "react";
-import { Route, Routes ,Navigate} from "react-router-dom";
-
+import { Route, Routes, Navigate } from "react-router-dom";
+import "antd/dist/antd.css";
+import "./styles/css/style.css";
 import Store from "./Components/Store";
 import ProductContextProvider from "./Context/ProductContextProvider";
 import ProductDetils from "./Components/ProductDetils";
-import NotFound from './Components/NotFound';
+import NotFound from "./Components/NotFound";
 import CartContextProvider from "./Context/CartContextProvider";
-
+import NavBar from './Components/NavBar';
 
 const App = () => {
   return (
-    <ProductContextProvider>
-    <CartContextProvider>
+    <ProductContextProvider >
+      <CartContextProvider>
+      <NavBar/>
+        <Routes>
+          <Route path="/products/:id" element={<ProductDetils />} />
+          <Route path="/products/" element={<Store />} />
+          <Route path="/" element={<Store />} />
 
-   
-      <Routes>
-        <Route path="/products/:id" element={<ProductDetils />} />  
-        <Route path="/products/" element={<Store />} /> 
-        <Route path="/" element={<Store />} /> 
-
-        <Route path="/notfound/" element={<NotFound/>} />        
-        <Route  path ="/*" element={ <Navigate replace to="/notfound" />} />
-        
-      </Routes> 
+          <Route path="/notfound/" element={<NotFound />} />
+          <Route path="/*" element={<Navigate replace to="/notfound" />} />
+        </Routes>
       </CartContextProvider>
     </ProductContextProvider>
   );

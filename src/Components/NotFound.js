@@ -12,7 +12,7 @@ const NotFound = () => {
             <h1>Bas Esheyi</h1>
             <button onClick={clickHandler}>go to shop seyed</button>
            
-        </div>
+        </div>              
     );
 };
 

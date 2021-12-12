@@ -43,22 +43,21 @@ import React,{useReducer ,createContext} from 'react';
                             checkOut:true
 
                         }
-                        case "Clear":
+                      case "Clear":
                         return{
                             selectedItems:[],
                             total:0,
                             itemConter:0,
                             checkOut:false
                         }
-
-     }
+                        default:
+                           return state;                              
+                           }
  }
 
  export const CartContexts=createContext();
 const CartContextProvider = ({children}) => {
-
 const [state,dispatch]=useReducer(cartReducer,initialState);
-
     return (
        <CartContexts.Provider value={{state:state,dispatch:dispatch}}>
            {children}
