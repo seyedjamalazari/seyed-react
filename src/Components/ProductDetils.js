@@ -5,7 +5,7 @@ import { ProductsContext } from "./../Context/ProductContextProvider";
 
 const ProductDetils = () => {
   const data = useContext(ProductsContext);
-  console.log(data);
+ 
   let params = useParams();
 
   if (data.length === 0) {

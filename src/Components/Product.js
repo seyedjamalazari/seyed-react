@@ -31,7 +31,7 @@ const Product = ({ productData }) => {
             Add tocart
           </button>
         )}
-        {  quantityCount(state,productData.id)>1 &&<button onClick={()=>dispatch({type:"De-Crease",payload:productData})}>- </button>         
+        {  quantityCount(state,productData.id)>1 &&<button onClick={()=>dispatch({type:"De-Crease",payload:productData})}>-</button>         
         }
         {    quantityCount(state,productData.id)===1 &&<button onClick={()=>dispatch({type:"Remove-Item",payload:productData})}><DeleteOutlined className={"icon"} /></button>         
         }

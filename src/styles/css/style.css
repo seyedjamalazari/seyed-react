@@ -4,13 +4,13 @@
   background-color: #d09fec7a;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding: 3rem;
+  padding: 1rem;
 }
 
 .imgproduct {
   width: 12rem;
   border-radius: 1em;
-  height: 20rem;
+  height: 15rem;
   padding: 2em;
   margin: 0;
   background-color: cornflowerblue;

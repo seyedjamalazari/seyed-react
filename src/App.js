@@ -8,6 +8,7 @@ import ProductDetils from "./Components/ProductDetils";
 import NotFound from "./Components/NotFound";
 import CartContextProvider from "./Context/CartContextProvider";
 import NavBar from './Components/NavBar';
+import Shoping from './Components/Shoping';
 
 const App = () => {
   return (
@@ -18,7 +19,7 @@ const App = () => {
           <Route path="/products/:id" element={<ProductDetils />} />
           <Route path="/products/" element={<Store />} />
           <Route path="/" element={<Store />} />
-
+          <Route path="/Shoping" element={<Shoping/>}/>
           <Route path="/notfound/" element={<NotFound />} />
           <Route path="/*" element={<Navigate replace to="/notfound" />} />
         </Routes>
