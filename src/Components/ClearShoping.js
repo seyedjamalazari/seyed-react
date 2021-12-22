@@ -42,4 +42,3 @@ const ClearShoping = () => {
 };
 
 export default ClearShoping;
-git statu

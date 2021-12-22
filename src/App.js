@@ -7,21 +7,23 @@ import ProductContextProvider from "./Context/ProductContextProvider";
 import ProductDetils from "./Components/ProductDetils";
 import NotFound from "./Components/NotFound";
 import CartContextProvider from "./Context/CartContextProvider";
-import NavBar from './Components/NavBar';
-import Shoping from './Components/Shoping';
+import NavBar from "./Components/NavBar";
+import Shoping from "./Components/Shoping";
+import SignUp from "./Components/SignUp";
 
 const App = () => {
   return (
-    <ProductContextProvider >
+    <ProductContextProvider>
       <CartContextProvider>
-      <NavBar/>
+        <NavBar />
         <Routes>
           <Route path="/products/:id" element={<ProductDetils />} />
           <Route path="/products/" element={<Store />} />
           <Route path="/" element={<Store />} />
-          <Route path="/Shoping" element={<Shoping/>}/>
+          <Route path="/Shoping" element={<Shoping />} />
           <Route path="/notfound/" element={<NotFound />} />
           <Route path="/*" element={<Navigate replace to="/notfound" />} />
+          <Route path="/SignUp" element={<SignUp />} />
         </Routes>
       </CartContextProvider>
     </ProductContextProvider>

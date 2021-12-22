@@ -14,6 +14,8 @@ const NavBar = () => {
 
 <button>{ state.itemsConter}</button>
 <Link to={`/Shoping`}>shop</Link>
+<Link to={`/SignUp`}>SignUp</Link>
+
 
 
 

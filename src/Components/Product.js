@@ -33,6 +33,7 @@ const Product = ({ productData }) => {
         )}
         {  quantityCount(state,productData.id)>1 &&<button onClick={()=>dispatch({type:"De-Crease",payload:productData})}>-</button>         
         }
+      <span>{state.itemsConter}</span>
         {    quantityCount(state,productData.id)===1 &&<button onClick={()=>dispatch({type:"Remove-Item",payload:productData})}><DeleteOutlined className={"icon"} /></button>         
         }
 
