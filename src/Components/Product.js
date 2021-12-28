@@ -3,17 +3,18 @@ import { Link } from "react-router-dom";
 import { isIncart, quantityCount, shorten } from "../shared/Function";
 import { useContext } from "react";
 import { CartContexts } from "../Context/CartContextProvider";
-import { PlusCircleOutlined, DeleteOutlined } from "@ant-design/icons";
+import { PlusCircleOutlined, DeleteOutlined,MinusCircleOutlined } from "@ant-design/icons";
 
 const Product = ({ productData }) => {
   const { state, dispatch } = useContext(CartContexts);
 
   return (
-    <div className={"Product"}>
-      <img src={productData.image} alt="product" className={"imgproduct"} />
+    <div className="products">
+      <img src={productData.image} alt="product" />
       <h2>{productData.id}</h2>
       <h3>{shorten(productData.title)}</h3>
-      <Link to={`/products/${productData.id}`}>ditails</Link>
+      <div className={"ditails"}>  <Link to={`/products/${productData.id}`} className={"Cart"}>ditails</Link></div>
+    
       <div>
         {isIncart(state, productData.id) ? (
           <button
@@ -24,17 +25,18 @@ const Product = ({ productData }) => {
             <PlusCircleOutlined className={"icon"} />
           </button>
         ) : (
-          <button
+          <button className={"Cart"}
             onClick={() => dispatch({ type: "Add-Item", payload: productData })}
           >
             
-            Add tocart
+            Add
           </button>
-        )}
-        {  quantityCount(state,productData.id)>1 &&<button onClick={()=>dispatch({type:"De-Crease",payload:productData})}>-</button>         
-        }
-      <span>{state.itemsConter}</span>
-        {    quantityCount(state,productData.id)===1 &&<button onClick={()=>dispatch({type:"Remove-Item",payload:productData})}><DeleteOutlined className={"icon"} /></button>         
+        )} {quantityCount(state,productData.id)>0 &&<span className={"icon ispan"}>{quantityCount(state,productData.id)}</span>}
+        {  quantityCount(state,productData.id)>1 &&<button onClick={()=>dispatch({type:"De-Crease",payload:productData})}><MinusCircleOutlined   className={"icon"}/></button>         
+}
+    
+
+        {    quantityCount(state,productData.id)===1 &&<button onClick={()=>dispatch({type:"Remove-Item",payload:productData})}><DeleteOutlined  className={"icon"}/></button>         
         }
 
       </div>

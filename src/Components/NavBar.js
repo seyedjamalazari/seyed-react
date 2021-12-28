@@ -12,9 +12,10 @@ const NavBar = () => {
         
     
 
-<button>{ state.itemsConter}</button>
-<Link to={`/Shoping`}>shop</Link>
-<Link to={`/SignUp`}>SignUp</Link>
+<div  className={"Shopsing"}><button>{ state.itemsConter}</button>sum buy</div>
+<div className={"Shopsing"}><Link to={`/Shoping`}>shop</Link></div>
+<div className={"Shopsing"}><Link to={`/SignUp`}>SignUp</Link></div>
+
 
 
 
