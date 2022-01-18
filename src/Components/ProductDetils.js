@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { Link, useParams } from "react-router-dom";
-import { shorten } from "../shared/Function";
 import { ProductsContext } from "./../Context/ProductContextProvider";
 
 const ProductDetils = () => {
@@ -13,15 +12,19 @@ const ProductDetils = () => {
   }
 
   const product = data[params.id - 1];
-  const { image, title } = product;
+  const { image, title ,price} = product;
 
   return (
-    <div>
-      <img src={image} alt="product" style={{ width: "30px" }} />
+    <div className={"store"}>
+    <div className={"products-details"}>
+   
+      <img src={image} alt="product" className={"image"} />
       <h3>App{params.id}</h3>
-      <h2>{shorten(title)}</h2>
-      <Link to={`/products/`}>back</Link>
-    </div>
+      <h2>{title}</h2>
+      <h3>{price}</h3>
+      <Link to={`/products/`}>go to shopping</Link>
+    </div> 
+   </div>
   );
 };
 

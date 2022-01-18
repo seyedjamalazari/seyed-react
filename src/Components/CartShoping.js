@@ -1,33 +1,53 @@
-import React from 'react';
-import { useContext } from 'react';
-import { CartContexts } from '../Context/CartContextProvider';
+import React from "react";
+import { useContext } from "react";
+import { CartContexts } from "../Context/CartContextProvider";
+import { shorten } from "../shared/Function";
+import {
+  PlusCircleOutlined,
+  DeleteOutlined,
+  MinusCircleOutlined,
+} from "@ant-design/icons";
 
+const CartShoping = ({ data }) => {
+  const { state, dispatch } = useContext(CartContexts);
+  const { image, title, price, quantity } = data;
 
-const CartShoping = ({data}) => {
-    const {dispatch}=useContext(CartContexts);
-    const {image,title,price,quantity}=data
+  return (
    
-    return (
-    
-        <div className={"storestyle"}>
-            <img src={image} style={{width:"30px"}}/>
-            <h3>{title}</h3>
+      <div className="cart-Shoping carte">
+        <img src={image} className="image" />
+        <h3>{shorten(title)}</h3>
+        <div className={"ispan"}>{quantity}</div>
+        <div>${price}</div>
+        <div>sumPrice${quantity * price}</div>
 
-         <span>{quantity}</span>
-               <div>{quantity>1?
-                  
-                  <button onClick={()=>dispatch({type:"De-Crease",payload:data})}>-</button>  :
-                  <button onClick={()=>dispatch({type:"Remove-Item",payload:data})}>remove</button>  
-                }
-                {
-                 <button onClick={()=>dispatch({type:"In-Crease",payload:data})}>+</button>   
-                }
-            </div>
-       
-          
-           
-        </div> 
-    );
+        <div>
+          {
+            <button
+              onClick={() => dispatch({ type: "In-Crease", payload: data })}
+            >
+              {" "}
+              <PlusCircleOutlined className={"icon"} />
+            </button>
+          }
+
+          {quantity > 1 ? (
+            <button
+              onClick={() => dispatch({ type: "De-Crease", payload: data })}
+            >
+              <MinusCircleOutlined className={"icon"} />
+            </button>
+          ) : (
+            <button
+              onClick={() => dispatch({ type: "Remove-Item", payload: data })}
+            >
+              <DeleteOutlined className={"icon"} />
+            </button>
+          )}
+        </div>
+      </div>
+   
+  );
 };
 
 export default CartShoping;

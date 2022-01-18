@@ -11,7 +11,7 @@ const Shoping = () => {
     const{state}=useContext(CartContexts);
     return (
         <>
-        <div>
+        <div className={"store"}>
            {state.selectedItems.map(item=><CartShoping key={item.id}data={item}/>)}
         </div>
         <ClearShoping/>

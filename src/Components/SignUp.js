@@ -4,6 +4,8 @@ import { validate } from '../shared/Function';
 import { ToastContainer} from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import { notify } from './toast';
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -55,40 +57,43 @@ isAccepted:true
 
 
     return (
-        <div >
+        <div className={"SignUp"} >
             <form onSubmit={submitHandler}>
                 <h2>SignUp</h2>
-                <div>
-                    <label>Name</label>
-                    <input type="text" name='name' value={data.name} onChange={changHandler}onFocus={focousHandler}/>
-                    {errors.name &&  touched.name&& <span>{errors.name}</span>}
+                <div className={"SignUpDiv"}>
+                    <label className={'lableSignup'}>Name</label>
+                    <input  className={'inputSignup'}type="text" name='name' value={data.name} onChange={changHandler}onFocus={focousHandler}/>
+                    {errors.name &&  touched.name&& <div >{errors.name}</div >}
                 </div>
-                <div>
-                    <label>Email</label>
-                    <input type="text" name='email' value={data.email}
+                <div className={"SignUpDiv"}>
+                    <label className={'lableSignup'}>Email</label>
+                    <input  className={'inputSignup'} type="text" name='email' value={data.email}
                     onChange={changHandler}onFocus={focousHandler}
-                    />{errors.email&& touched.email && <span>{errors.email}</span>}
-                </div>  <div>
-                    <label>PassWord</label>
-                    <input type="password" name='password' value={data.password}
+                    />{errors.email&& touched.email && <div>{errors.email}</div> }
+                </div>  <div className={"SignUpDiv"}>
+                    <label className={'lableSignup'}>PassWord</label>
+                    <input   className={'inputSignup'}type="password" name='password' value={data.password}
                    onChange={changHandler}
-                      />{errors.password&& touched.password && <span>{errors.password}</span>}
-                </div>  <div>
-                    <label>ConfirmPassword</label>
-                    <input type="password" name='confirmPassword' value={data.confirmPassword}  onChange={changHandler}onFocus={focousHandler}
-                    />{errors.confirmPassword&& touched.confirmPassword && <span>{errors.confirmPassword}</span>}
+                      />{errors.password&& touched.password && <div>{errors.password}</div >}
+                </div>  <div className={"SignUpDiv"}>
+                    <label className={'lableSignup'}>ConfirmPassword</label>
+                    <input  className={'inputSignup'} type="password" name='confirmPassword' value={data.confirmPassword}  onChange={changHandler}onFocus={focousHandler}
+                    />{errors.confirmPassword&& touched.confirmPassword && <div  >{errors.confirmPassword}</div>}
                 </div>
-                <div>
-                    <label>isAccepted</label>
-                    <input type="checkbox" name='isAccepted' value={data.isAccepted}  onChange={changHandler}onFocus={focousHandler}
-                    />{errors.isAccepted && touched.isAccepted&& <span>{errors.isAccepted}</span>}
+                <div className={"SignUpDiv"}>
+                    <label className={'lableSignup'}>isAccepted</label>
+                    <input  className={'inputSignup'} type="checkbox" name='isAccepted' value={data.isAccepted}  onChange={changHandler}onFocus={focousHandler}
+                    />{errors.isAccepted && touched.isAccepted&& <div >{errors.isAccepted}</div >}
                 </div>
-                <div>
-                    <a href="#">log in</a>
-                    <button type="submit">sign in</button>
+                <div className={"SignUpDiv"}>
+                    <button   className={'inputSignup but'}type="submit">sign in</button>
                 </div>
             </form>
             <ToastContainer />
+            <div className={"SignUpDiv"}>
+                    <button   className={'inputSignup but'}type="submit"> <Link to={`/products/`}>go to shop</Link></button>
+                </div>
+           
         </div>
     );
 };

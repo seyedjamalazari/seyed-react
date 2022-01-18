@@ -8,12 +8,13 @@ const ClearShoping = () => {
 
 
   return (
-    <div>
-      <div>
-        <h4>total:</h4>
+    <div className={"clearShoping"}>
+      <div className={"total"}>
+        <h4>quantity:</h4>
         <span>{state.itemsConter}</span>
-        <h4>total:</h4>
+        <h4>total:$</h4>
         <span>{state.total}</span>
+       
       </div>
       {
         <div>

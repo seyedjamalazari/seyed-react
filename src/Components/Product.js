@@ -9,11 +9,14 @@ const Product = ({ productData }) => {
   const { state, dispatch } = useContext(CartContexts);
 
   return (
-    <div className="products">
-      <img src={productData.image} alt="product" />
+    <div className={"products"}>
+      
+      <img src={productData.image} alt="product" className={"image"} />
+
       <h2>{productData.id}</h2>
       <h3>{shorten(productData.title)}</h3>
-      <div className={"ditails"}>  <Link to={`/products/${productData.id}`} className={"Cart"}>ditails</Link></div>
+      <h4>{productData.price}</h4>
+      <div className={"ditails"}>  <Link to={`/products/${productData.id}`}>ditails</Link></div>
     
       <div>
         {isIncart(state, productData.id) ? (
@@ -25,7 +28,7 @@ const Product = ({ productData }) => {
             <PlusCircleOutlined className={"icon"} />
           </button>
         ) : (
-          <button className={"Cart"}
+          <button  className={"ditails"}
             onClick={() => dispatch({ type: "Add-Item", payload: productData })}
           >
             
