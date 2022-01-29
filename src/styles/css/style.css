@@ -20,7 +20,8 @@ body {
   flex-wrap: wrap;
 }
 
-.products, .cart-Shoping {
+.products,
+.cart-Shoping {
   display: flex;
   flex-direction: column;
   width: 28em;
@@ -33,7 +34,8 @@ body {
   align-items: center;
   padding-bottom: 1em;
 }
-.products:hover, .cart-Shoping:hover {
+.products:hover,
+.cart-Shoping:hover {
   cursor: pointer;
   opacity: 1;
   transition: 500ms;
@@ -55,7 +57,8 @@ body {
   box-shadow: 0.5em 1.5em 4.5em white;
 }
 
-h2, h3 {
+h2,
+h3 {
   font-size: 1.3em;
   font-weight: 2em;
   color: #050505;
@@ -126,6 +129,161 @@ h2, h3 {
   transition-timing-function: cubic-bezier(0.5, 2, 0.1, 0.1) !important;
 }
 
+.navbar {
+  width: 100%;
+  height: 4em;
+  background-color: green;
+  opacity: 0.9;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Slide {
+  width: 100%;
+  height: 100%;
+  background-color: brown;
+}
+
+.Shoping {
+  width: 5em;
+  height: 3em;
+  background-color: rgba(246, 238, 245, 0.911);
+  color: #050505;
+  text-align: center;
+  border-radius: 0.5em;
+  padding: 0.3rem;
+  box-shadow: 4px 4px 4px 0px #d1d9e6 inset, -4px -4px 4px 0px #ffffff inset;
+  line-height: 2.3em;
+}
+.Shoping:hover {
+  background-color: #050505;
+  color: rgba(246, 238, 245, 0.911);
+  box-shadow: 4px 4px 4px 0px #d1d9e6 inset, -4px -4px 4px 0px #ffffff inset;
+  transition: 300ms;
+  transform: scale(1.1, 1.04);
+}
+
+.SignUp {
+  display: flex;
+  flex-direction: row;
+  width: 15em;
+  height: 40em;
+  background-color: rgba(246, 238, 245, 0.911);
+  border-radius: 0.2em;
+  margin: 0.5em auto;
+  position: relative;
+  padding-left: 0.3em;
+  overflow: hidden;
+}
+
+.lableSignup {
+  width: 12em;
+  height: 1.5em;
+  background-color: #bbb;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.2em 1em;
+  border-radius: 0.4em;
+  box-shadow: 1px 2px #ccc;
+  padding-left: 0.2em;
+}
+
+.inputSignup {
+  width: 12em;
+  height: 1.7em;
+  margin: 0.5em 0.5em;
+  border-radius: 0.4em;
+  top: 0.5em;
+}
+
+.but {
+  width: 10em;
+  height: 2em;
+  transition: 0.6s;
+  margin: 0 auto;
+}
+.but:hover {
+  background-color: violet;
+  box-shadow: 4px 4px #eee;
+}
+
+.SignUpDiv {
+  height: 5.5em;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.SignUpDiv div {
+  width: 80%;
+  height: 1.5em;
+  color: red;
+  position: absolute;
+  left: 13%;
+  line-height: 3em;
+  margin-top: 0.7em;
+}
+
+.clearShoping {
+  width: 91.66%;
+  height: 15em;
+  background-color: #bbb;
+  margin: 2em auto;
+  border-radius: 0.3em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.total {
+  background-color: blueviolet;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 0.3em;
+}
+
+.check {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 0.3em;
+}
+
+.clearShopingDiv {
+  background-color: white;
+  width: 8em;
+  height: 1.5em;
+  display: flex;
+  margin: 1em;
+  overflow: hidden;
+  border-radius: 0.2em;
+  box-shadow: 1px 1px 2px 1px #ccc;
+  font-size: 1.3em;
+  font-weight: 1em;
+  color: #050505;
+}
+.clearShopingDiv:hover {
+  background-color: #bbb;
+  color: red;
+}
+
+.clearShopingbut {
+  background-color: #0eaa0e;
+  width: 5em;
+  height: 2em;
+  display: flex;
+  margin: 1em 0.2em;
+  overflow: hidden;
+  border-radius: 0.2em;
+  box-shadow: 1px 1px 2px 1px #ccc;
+  font-size: 1em;
+  font-weight: 1em;
+  color: #050505;
+}
+.clearShopingbut:hover {
+  background-color: #bbb;
+}
+
 @media (min-width: 300px) and (max-width: 540px) {
   .Shoping {
     display: none;
@@ -143,7 +301,8 @@ h2, h3 {
     flex-wrap: initial;
   }
 
-  .products, .cart-Shoping {
+  .products,
+.cart-Shoping {
     width: 41.66%;
     display: flex;
     margin: 2em auto;
@@ -155,6 +314,18 @@ h2, h3 {
   }
   .products-details img {
     width: 91.66%;
+  }
+
+  .SignUp {
+    width: 19em;
+  }
+
+  .SignUpDiv div {
+    left: 20%;
+  }
+
+  .clearShoping {
+    width: 66.66%;
   }
 }
 @media (min-width: 540px) and (max-width: 780px) {
@@ -171,7 +342,8 @@ h2, h3 {
     flex-wrap: initial;
   }
 
-  .products, .cart-Shoping {
+  .products,
+.cart-Shoping {
     width: 32%;
     display: flex;
     margin: 2em auto;
@@ -185,6 +357,23 @@ h2, h3 {
   .products-details img {
     width: 91.66%;
     height: 11em;
+  }
+
+  .SignUp {
+    width: 25em;
+  }
+
+  .SignUpDiv div {
+    left: 27%;
+  }
+
+  .clearShoping {
+    width: 75%;
+    flex-wrap: nowrap;
+  }
+  .clearShoping .total {
+    width: 50%;
+    height: 100%;
   }
 }
 @media (min-width: 780px) and (max-width: 1200px) {
@@ -202,7 +391,8 @@ h2, h3 {
     justify-content: initial;
   }
 
-  .products, .cart-Shoping {
+  .products,
+.cart-Shoping {
     width: 23%;
     margin: 2em auto;
     display: flex;
@@ -216,6 +406,23 @@ h2, h3 {
   .products-details img {
     width: 66.66%;
     height: 15em;
+  }
+
+  .SignUp {
+    width: 25em;
+  }
+
+  .SignUpDiv div {
+    left: 27%;
+  }
+
+  .clearShoping {
+    width: 66.66%;
+    height: 50%;
+    flex-wrap: wrap;
+  }
+  .clearShoping .total {
+    width: 100%;
   }
 }
 @media (min-width: 1200px) {
@@ -233,7 +440,8 @@ h2, h3 {
     justify-content: initial;
   }
 
-  .products, .cart-Shoping {
+  .products,
+.cart-Shoping {
     width: 19%;
     margin: 4em auto;
     display: flex;
@@ -247,6 +455,14 @@ h2, h3 {
   .products-details img {
     width: 66.66%;
     height: 18em;
+  }
+
+  .SignUp {
+    width: 25em;
+  }
+
+  .SignUpDiv div {
+    left: 27%;
   }
 }
 

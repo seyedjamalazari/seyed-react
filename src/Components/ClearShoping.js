@@ -8,20 +8,19 @@ const ClearShoping = () => {
 
 
   return (
-    <div className={"clearShoping"}>
-      <div className={"total"}>
-        <h4>quantity:</h4>
-        <span>{state.itemsConter}</span>
-        <h4>total:$</h4>
-        <span>{state.total}</span>
+    <div className="clearShoping">
+      <div className="total">
+        
+        <div className="clearShopingDiv">quantity:  {state.itemsConter}</div>        
+        <div className="clearShopingDiv">total:{state.total}$</div>
        
       </div>
       {
-        <div>
-          <button onClick={() => dispatch({ type: "Check-Out" })}>
+        <div className="check">
+          <button className="clearShopingbut" onClick={() => dispatch({ type: "Check-Out" })}>
             check-out
           </button>
-          <button onClick={() => dispatch({ type: "Clear" })}>clear</button>
+          <button className="clearShopingbut"  onClick={() => dispatch({ type: "Clear" })}>clear</button>
         </div>
       }
       {state.checkOut && (
@@ -33,9 +32,8 @@ const ClearShoping = () => {
 
       {!state.checkOut && state.itemsConter === 0 && (
         <div>
-          <h3>want to buy?</h3>
-
-          <Link to="/products">go</Link>
+          <h3>want to buy?</h3>          
+          <div> <Link to="/products/">back to shop</Link></div>
         </div>
       )}
     </div>

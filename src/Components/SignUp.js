@@ -87,12 +87,13 @@ isAccepted:true
                 </div>
                 <div className={"SignUpDiv"}>
                     <button   className={'inputSignup but'}type="submit">sign in</button>
-                </div>
-            </form>
-            <ToastContainer />
-            <div className={"SignUpDiv"}>
+                </div> 
+                <div className={"SignUpDiv"}>
                     <button   className={'inputSignup but'}type="submit"> <Link to={`/products/`}>go to shop</Link></button>
                 </div>
+           
+            </form>
+            <ToastContainer />
            
         </div>
     );

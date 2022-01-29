@@ -3,34 +3,30 @@ import { useContext,useState } from 'react';
 import { CartContexts } from '../Context/CartContextProvider';
 import { Link} from "react-router-dom";
 import {ShoppingCartOutlined } from "@ant-design/icons";
+// import Slide from './Slide';
 
   
 const NavBar = () => {
     const {state}=useContext(CartContexts);
-    const{style,setStyle}=useState("hamburge");
 
-const changStyle=()=>{
-    setStyle("ulNavBarSm");
-    
 
-}
     return (
-        <div className={"navbar"}>
-        {/* <button onClick={changStyle} >
-        <BorderInnerOutlined />     
-        </button> */}
-     {/* <div className={"style.navbar"}> */}
+      
+        <div className="navbar">        
 <span className={"Shoping"}><ShoppingCartOutlined  className={"icon"}/>{state.itemsConter}</span>
 <Link to={`/Shoping`}className={"Shoping"}>shop</Link>
 <Link to={`/SignUp`}className={"Shoping"}>SignUp</Link>
- {/* </div> */}
-{/* <ul className={'ulNavBarSm'}>
-<li>sum buy{state.itemsConter}</li>
-<li><Link to={`/Shoping`}>shop</Link>
-</li>
-<li><Link to={`/SignUp`}>SignUp</Link></li>
-</ul> */}
-     </div>
+{/* <Slide/> */}
+{/* <div> 
+     <form>
+         <lable>Menu</lable>
+         <select>
+             <option to={`/SignUp`}>SignUp</option>
+             {/* <option valu="SignUp"><Link to={`/SignUp`}className={"Shoping"}>SignUp</Link></option> */}
+         {/* </select>
+  </form></div> */} 
+ </div> 
+
     );
 }; 
 

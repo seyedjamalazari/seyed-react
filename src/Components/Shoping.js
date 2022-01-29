@@ -15,7 +15,7 @@ const Shoping = () => {
            {state.selectedItems.map(item=><CartShoping key={item.id}data={item}/>)}
         </div>
         <ClearShoping/>
-      <div> <Link to="/products/">go to shop</Link></div>
+      
        </>
     );
 };
