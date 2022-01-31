@@ -13,7 +13,7 @@ const NavBar = () => {
     return (
       
         <div className="navbar">        
-<span className={"Shoping"}><ShoppingCartOutlined  className={"icon"}/>{state.itemsConter}</span>
+<div className={"Shoping"}><ShoppingCartOutlined  className={"icon"}/>{state.itemsConter}</div>
 <Link to={`/Shoping`}className={"Shoping"}>shop</Link>
 <Link to={`/SignUp`}className={"Shoping"}>SignUp</Link>
 {/* <Slide/> */}

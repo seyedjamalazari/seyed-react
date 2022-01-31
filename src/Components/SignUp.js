@@ -5,6 +5,7 @@ import { ToastContainer} from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import { notify } from './toast';
 import { Link } from 'react-router-dom';
+import NavBar from './NavBar';
 
 
 
@@ -57,6 +58,8 @@ isAccepted:true
 
 
     return (
+        <>
+        <NavBar/>
         <div className={"SignUp"} >
             <form onSubmit={submitHandler}>
                 <h2>SignUp</h2>
@@ -96,6 +99,7 @@ isAccepted:true
             <ToastContainer />
            
         </div>
+        </>
     );
 };
 

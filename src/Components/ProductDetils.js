@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import { ProductsContext } from "./../Context/ProductContextProvider";
+import NavBar from "./NavBar";
 
 const ProductDetils = () => {
   const data = useContext(ProductsContext);
@@ -15,6 +16,8 @@ const ProductDetils = () => {
   const { image, title ,price} = product;
 
   return (
+    <>
+    <NavBar/>
     <div className={"store"}>
     <div className={"products-details"}>
    
@@ -24,7 +27,7 @@ const ProductDetils = () => {
       <h3>{price}</h3>
       <Link to={`/products/`}>go to shopping</Link>
     </div> 
-   </div>
+   </div></>
   );
 };
 
